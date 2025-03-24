@@ -140,7 +140,7 @@ const Dashboard: React.FC = () => {
                         {item.impact === 'high' ? '高影响' : item.impact === 'medium' ? '中影响' : '低影响'}
                       </span>
                     </div>
-                    <Link to={`/regulation/${item.id}`} className="font-medium block hover:text-primary transition-colors">
+                    <Link to={`/legalbase/regulation/${item.id}`} className="font-medium block hover:text-primary transition-colors">
                       {item.title}
                     </Link>
                     <p className="text-sm text-gray-500">{item.description}</p>
@@ -223,7 +223,7 @@ const Dashboard: React.FC = () => {
                   </div>
                   <p className="text-sm text-gray-600 mb-2">新规明确员工敏感信息处理边界，要求建立专门制度，指定专人负责，定期培训与审计。</p>
                   <div className="text-xs text-gray-500">生效日期: 2025-04-01</div>
-                  <Link to="/regulation/1" className="text-primary text-sm flex items-center mt-2 hover:underline">
+                  <Link to="/legalbase/regulation/1" className="text-primary text-sm flex items-center mt-2 hover:underline">
                     查看详情 <FaArrowRight className="ml-1" />
                   </Link>
                 </div>
@@ -235,7 +235,7 @@ const Dashboard: React.FC = () => {
                   </div>
                   <p className="text-sm text-gray-600 mb-2">非全日制用工每周工作时间上限调整，权益保障进一步明确，需更新相关合同模板。</p>
                   <div className="text-xs text-gray-500">生效日期: 2025-05-01</div>
-                  <Link to="/regulation/2" className="text-primary text-sm flex items-center mt-2 hover:underline">
+                  <Link to="/legalbase/regulation/2" className="text-primary text-sm flex items-center mt-2 hover:underline">
                     查看详情 <FaArrowRight className="ml-1" />
                   </Link>
                 </div>
@@ -282,7 +282,7 @@ const Dashboard: React.FC = () => {
             </ul>
             
             <div className="mt-6">
-              <Link to="/compliance" className="btn btn-primary w-full flex justify-center items-center">
+              <Link to="/legalbase/compliance" className="btn btn-primary w-full flex justify-center items-center">
                 查看合规建议
               </Link>
             </div>
@@ -336,7 +336,7 @@ const Dashboard: React.FC = () => {
             </div>
             
             <div className="text-center">
-              <Link to="/compliance" className="text-primary text-sm hover:underline flex items-center justify-center">
+              <Link to="/legalbase/compliance" className="text-primary text-sm hover:underline flex items-center justify-center">
                 查看详细报告 <FaArrowRight className="ml-1" />
               </Link>
             </div>

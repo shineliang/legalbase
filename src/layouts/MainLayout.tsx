@@ -20,21 +20,21 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <Link to="/" className="text-xl font-bold">智能合规系统</Link>
+              <Link to="/legalbase" className="text-xl font-bold">智能合规系统</Link>
               <div className="hidden md:flex items-center space-x-1">
-                <Link to="/" className={`px-3 py-2 rounded-md ${isActive('/') ? 'bg-success-dark' : 'hover:bg-success-dark'}`}>
+                <Link to="/legalbase" className={`px-3 py-2 rounded-md ${isActive('/legalbase') ? 'bg-success-dark' : 'hover:bg-success-dark'}`}>
                   <span className="flex items-center">{React.createElement(FaChartPie, { className: "mr-2" })} 法规监控</span>
                 </Link>
-                <Link to="/compliance" className={`px-3 py-2 rounded-md ${isActive('/compliance') ? 'bg-success-dark' : 'hover:bg-success-dark'}`}>
+                <Link to="/legalbase/compliance" className={`px-3 py-2 rounded-md ${isActive('/legalbase/compliance') ? 'bg-success-dark' : 'hover:bg-success-dark'}`}>
                   <span className="flex items-center">{React.createElement(FaClipboardCheck, { className: "mr-2" })} 合规建议</span>
                 </Link>
-                <Link to="/risk" className={`px-3 py-2 rounded-md ${isActive('/risk') ? 'bg-success-dark' : 'hover:bg-success-dark'}`}>
+                <Link to="/legalbase/risk" className={`px-3 py-2 rounded-md ${isActive('/legalbase/risk') ? 'bg-success-dark' : 'hover:bg-success-dark'}`}>
                   <span className="flex items-center">{React.createElement(FaExclamationTriangle, { className: "mr-2" })} 风险预警</span>
                 </Link>
-                <Link to="/contracts" className={`px-3 py-2 rounded-md ${isActive('/contracts') ? 'bg-success-dark' : 'hover:bg-success-dark'}`}>
+                <Link to="/legalbase/contracts" className={`px-3 py-2 rounded-md ${isActive('/legalbase/contracts') ? 'bg-success-dark' : 'hover:bg-success-dark'}`}>
                   <span className="flex items-center">{React.createElement(FaFileContract, { className: "mr-2" })} 合同管理</span>
                 </Link>
-                <Link to="/ai-hub" className={`px-3 py-2 rounded-md ${isActive('/ai-hub') ? 'bg-success-dark' : 'hover:bg-success-dark'} relative`}>
+                <Link to="/legalbase/ai-hub" className={`px-3 py-2 rounded-md ${isActive('/legalbase/ai-hub') ? 'bg-success-dark' : 'hover:bg-success-dark'} relative`}>
                   <span className="flex items-center">{React.createElement(FaBrain, { className: "mr-2" })} AI合规中心</span>
                   <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5">新</span>
                 </Link>
@@ -52,7 +52,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
               <button className="bg-white text-success px-4 py-2 rounded-md hover:bg-gray-100">
                 搜索
               </button>
-              <Link to="/assistant" className="ml-2 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md flex items-center">
+              <Link to="/legalbase/assistant" className="ml-2 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md flex items-center">
                 <FaRobot className="mr-2" /> AI助手
               </Link>
             </div>
@@ -61,19 +61,19 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
           {/* 移动端菜单 */}
           <div className="md:hidden mt-2">
             <div className="flex flex-col space-y-1">
-              <Link to="/" className={`px-3 py-2 rounded-md ${isActive('/') ? 'bg-success-dark' : ''}`}>
+              <Link to="/legalbase" className={`px-3 py-2 rounded-md ${isActive('/legalbase') ? 'bg-success-dark' : ''}`}>
                 <span className="flex items-center">{React.createElement(FaChartPie, { className: "mr-2" })} 法规监控</span>
               </Link>
-              <Link to="/compliance" className={`px-3 py-2 rounded-md ${isActive('/compliance') ? 'bg-success-dark' : ''}`}>
+              <Link to="/legalbase/compliance" className={`px-3 py-2 rounded-md ${isActive('/legalbase/compliance') ? 'bg-success-dark' : ''}`}>
                 <span className="flex items-center">{React.createElement(FaClipboardCheck, { className: "mr-2" })} 合规建议</span>
               </Link>
-              <Link to="/risk" className={`px-3 py-2 rounded-md ${isActive('/risk') ? 'bg-success-dark' : ''}`}>
+              <Link to="/legalbase/risk" className={`px-3 py-2 rounded-md ${isActive('/legalbase/risk') ? 'bg-success-dark' : ''}`}>
                 <span className="flex items-center">{React.createElement(FaExclamationTriangle, { className: "mr-2" })} 风险预警</span>
               </Link>
-              <Link to="/contracts" className={`px-3 py-2 rounded-md ${isActive('/contracts') ? 'bg-success-dark' : ''}`}>
+              <Link to="/legalbase/contracts" className={`px-3 py-2 rounded-md ${isActive('/legalbase/contracts') ? 'bg-success-dark' : ''}`}>
                 <span className="flex items-center">{React.createElement(FaFileContract, { className: "mr-2" })} 合同管理</span>
               </Link>
-              <Link to="/ai-hub" className={`px-3 py-2 rounded-md ${isActive('/ai-hub') ? 'bg-success-dark' : ''}`}>
+              <Link to="/legalbase/ai-hub" className={`px-3 py-2 rounded-md ${isActive('/legalbase/ai-hub') ? 'bg-success-dark' : ''}`}>
                 <span className="flex items-center">{React.createElement(FaBrain, { className: "mr-2" })} AI合规中心</span>
                 <span className="bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5 ml-2">新</span>
               </Link>

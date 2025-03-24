@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 
 // 页面导入
@@ -15,38 +15,39 @@ import AIComplianceHub from './pages/AIComplianceHub';
 function App() {
   return (
     <Routes>
-      <Route path="/welcome" element={<Welcome />} />
-      <Route path="/" element={
+      <Route path="/" element={<Navigate to="/legalbase" replace />} />
+      <Route path="/legalbase/welcome" element={<Welcome />} />
+      <Route path="/legalbase" element={
         <MainLayout>
           <Dashboard />
         </MainLayout>
       } />
-      <Route path="/compliance" element={
+      <Route path="/legalbase/compliance" element={
         <MainLayout>
           <ComplianceRecommendations />
         </MainLayout>
       } />
-      <Route path="/regulation/:id" element={
+      <Route path="/legalbase/regulation/:id" element={
         <MainLayout>
           <RegulationDetail />
         </MainLayout>
       } />
-      <Route path="/risk" element={
+      <Route path="/legalbase/risk" element={
         <MainLayout>
           <RiskWarning />
         </MainLayout>
       } />
-      <Route path="/contracts" element={
+      <Route path="/legalbase/contracts" element={
         <MainLayout>
           <ContractManagement />
         </MainLayout>
       } />
-      <Route path="/assistant" element={
+      <Route path="/legalbase/assistant" element={
         <MainLayout>
           <AIAssistant />
         </MainLayout>
       } />
-      <Route path="/ai-hub" element={
+      <Route path="/legalbase/ai-hub" element={
         <MainLayout>
           <AIComplianceHub />
         </MainLayout>

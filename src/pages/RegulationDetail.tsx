@@ -408,7 +408,7 @@ const RegulationDetail: React.FC = () => {
               ))}
             </div>
             <div className="mt-6">
-              <Link to="/compliance" className="btn btn-primary w-full">查看详细建议</Link>
+              <Link to="/legalbase/compliance" className="btn btn-primary w-full">查看详细建议</Link>
             </div>
           </div>
           
