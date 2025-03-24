@@ -187,7 +187,7 @@ const Dashboard: React.FC = () => {
                 {heatmapData.map((item) => (
                   <Link 
                     key={item.id} 
-                    to={`/regulation/${item.id}`} 
+                    to={`/legalbase/regulation/${item.id}`} 
                     className={`${getHeatmapStyle(item.impact)} p-3 rounded text-center text-white text-sm shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5`}
                   >
                     {item.title}

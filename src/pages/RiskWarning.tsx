@@ -340,7 +340,7 @@ const RiskWarning: React.FC = () => {
                   </div>
                   <div className="mt-3 md:mt-0">
                     <Link 
-                      to={`/regulation/${warning.id}`} 
+                      to={`/legalbase/regulation/${warning.id}`} 
                       className="text-primary hover:text-primary-dark inline-flex items-center"
                     >
                       查看详情 {React.createElement(FaArrowRight, { className: "ml-1" })}
