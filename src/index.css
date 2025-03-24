@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color: theme('colors.gray.800');
+    font-family: 'Noto Sans SC', sans-serif;
+  }
+  body {
+    background-color: theme('colors.gray.50');
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-sm p-6;
+  }
+  
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium focus:outline-none transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-dark;
+  }
+  
+  .btn-success {
+    @apply bg-success text-white hover:bg-success-dark;
+  }
+  
+  .btn-warning {
+    @apply bg-warning text-white hover:bg-warning-dark;
+  }
+  
+  .btn-danger {
+    @apply bg-danger text-white hover:bg-danger-dark;
+  }
+  
+  .btn-outline {
+    @apply border border-gray-300 bg-white text-gray-700 hover:bg-gray-50;
+  }
+  
+  .btn-sm {
+    @apply px-3 py-1 text-sm;
+  }
+} 
