@@ -10,6 +10,7 @@ import RegulationDetail from './pages/RegulationDetail';
 import RiskWarning from './pages/RiskWarning';
 import ContractManagement from './pages/ContractManagement';
 import AIAssistant from './pages/AIAssistant';
+import AIComplianceHub from './pages/AIComplianceHub';
 
 function App() {
   return (
@@ -43,6 +44,11 @@ function App() {
       <Route path="/assistant" element={
         <MainLayout>
           <AIAssistant />
+        </MainLayout>
+      } />
+      <Route path="/ai-hub" element={
+        <MainLayout>
+          <AIComplianceHub />
         </MainLayout>
       } />
     </Routes>

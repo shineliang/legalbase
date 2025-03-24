@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaChartPie, FaClipboardCheck, FaExclamationTriangle, FaFileContract, FaSearch } from 'react-icons/fa';
+import { FaChartPie, FaClipboardCheck, FaExclamationTriangle, FaFileContract, FaSearch, FaRobot, FaBrain } from 'react-icons/fa';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -34,6 +34,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
                 <Link to="/contracts" className={`px-3 py-2 rounded-md ${isActive('/contracts') ? 'bg-success-dark' : 'hover:bg-success-dark'}`}>
                   <span className="flex items-center">{React.createElement(FaFileContract, { className: "mr-2" })} 合同管理</span>
                 </Link>
+                <Link to="/ai-hub" className={`px-3 py-2 rounded-md ${isActive('/ai-hub') ? 'bg-success-dark' : 'hover:bg-success-dark'} relative`}>
+                  <span className="flex items-center">{React.createElement(FaBrain, { className: "mr-2" })} AI合规中心</span>
+                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5">新</span>
+                </Link>
               </div>
             </div>
             <div className="flex items-center">
@@ -48,6 +52,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
               <button className="bg-white text-success px-4 py-2 rounded-md hover:bg-gray-100">
                 搜索
               </button>
+              <Link to="/assistant" className="ml-2 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md flex items-center">
+                <FaRobot className="mr-2" /> AI助手
+              </Link>
             </div>
           </div>
           
@@ -65,6 +72,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
               </Link>
               <Link to="/contracts" className={`px-3 py-2 rounded-md ${isActive('/contracts') ? 'bg-success-dark' : ''}`}>
                 <span className="flex items-center">{React.createElement(FaFileContract, { className: "mr-2" })} 合同管理</span>
+              </Link>
+              <Link to="/ai-hub" className={`px-3 py-2 rounded-md ${isActive('/ai-hub') ? 'bg-success-dark' : ''}`}>
+                <span className="flex items-center">{React.createElement(FaBrain, { className: "mr-2" })} AI合规中心</span>
+                <span className="bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5 ml-2">新</span>
               </Link>
             </div>
           </div>
